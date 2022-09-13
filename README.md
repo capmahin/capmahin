@@ -1,7 +1,9 @@
+
+(https://cashoutgod.ru/storage/2021/02/hacker.jpg)
+
 ### Hi there 👋, i am Mahin
 #### Full Stack Developer(MERN)
-![Full Stack Developer(MERN)](https://cashoutgod.ru/storage/2021/02/hacker.jpg)
-
+![Full Stack Developer(MERN)]
 Web Developer
 
 Languages: HTML5, CSS3, JavaScript. Assembly language.
