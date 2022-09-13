@@ -4,7 +4,6 @@
 ### Hi there 👋, i am Mahin
 #### Full Stack Developer(MERN)
 
-Full Stack Developer
 
 Languages: HTML5, CSS3, JavaScript. Assembly language.
 Technologies:  Rest APIs, JSON, MVC, XML, Socket, WebRTC.
