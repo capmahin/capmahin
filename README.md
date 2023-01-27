@@ -1,6 +1,6 @@
 
 
-![Full Stack Developer(MERN)]([https://cashoutgod.ru/storage/2021/02/hacker.jpg](https://cutewallpaper.org/21/red-batman-wallpaper/Batman-Wallpaper-by-dedjezter-on-DeviantArt.jpg)
+![Full Stack Developer(MERN)]([https://cashoutgod.ru/storage/2021/02/hacker.jpg])
 ### Hi there 👋, i am Mahin
 #### Full Stack Developer(MERN)
 
