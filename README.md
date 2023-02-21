@@ -14,7 +14,7 @@ Version Control: Git.
 Authentication: Firebase Authentication , JWT, Next Authentication.
 Deployment: Vercel , Heroku, Netlify.
 
-Skills: HTML/CSS/JS/REACT/NODE/EXPRESS/MONGODB/SOCKET/WEBRTC
+Skills: HTML/CSS/JS/REACT/NODE/EXPRESS/MONGODB/SOCKET/WEBRTC/NEXT JS.
 
 - 🔭 I’m currently working on Aamazone Project. 
 - 🌱 I’m currently learning TypeScript. 
