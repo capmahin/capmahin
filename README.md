@@ -5,19 +5,19 @@
 #### Full Stack Developer(MERN)
 
 
-Languages: HTML5, CSS3, JavaScript. Assembly language.
+Languages: HTML5, CSS3, JavaScript. Assembly language, TypeScript.
 Technologies:  Rest APIs, JSON, MVC, XML, Socket, WebRTC.
-Frameworks: Bootstrap5, Express, React, Node.js, Tailwind-CSS, Redux.
+Frameworks: Bootstrap5, Express, React, Node.js, Tailwind-CSS, Redux, Next Js.
 Database: Mongo DB, Firebase store.
 IDE/Tools: Visual Studio.
 Version Control: Git.
-Authentication: Firebase Authentication , JWT.
+Authentication: Firebase Authentication , JWT, Next Authentication.
 Deployment: Vercel , Heroku, Netlify.
 
 Skills: HTML/CSS/JS/REACT/NODE/EXPRESS/MONGODB/SOCKET/WEBRTC
 
-- 🔭 I’m currently working on Language-Fixer Project 
-- 🌱 I’m currently learning Nodejs 
+- 🔭 I’m currently working on Aamazone Project. 
+- 🌱 I’m currently learning TypeScript. 
 - 👯 I’m looking to collaborate on github 
 - 💬 Ask me about Web Development 
 - 📫 How to reach me: Facebook, Discord, LinkedIn. 
