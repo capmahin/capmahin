@@ -16,7 +16,7 @@ Deployment: Vercel , Heroku, Netlify.
 
 Skills: HTML/CSS/JS/REACT/NODE/EXPRESS/MONGODB/SOCKET/WEBRTC/NEXT JS.
 
-- 🔭 I’m currently working on Aamazone Project. 
+- 🔭 I’m currently working on Deco-Design Project. 
 - 🌱 I’m currently learning TypeScript. 
 - 👯 I’m looking to collaborate on github 
 - 💬 Ask me about Web Development 
