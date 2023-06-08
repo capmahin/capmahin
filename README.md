@@ -1,6 +1,6 @@
 
 
-![Full Stack Developer(MERN)]([https://wallpaperaccess.com/full/844221.jpg])
+![Full Stack Developer(MERN)](https://wallpaperaccess.com/full/844221.jpg)
 ### Hi there 👋, i am Mahin
 #### Full Stack Developer(MERN)
 
