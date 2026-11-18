@@ -40,11 +40,9 @@
 ## 🦇 Achievements
 
 <p align="center">
-  <a href="https://archiveprogram.github.com/"><img src="https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/acbadge.gif" width="45" height="45" alt="Arctic Code Vault"></a>
-  <a href="https://docs.github.com/en/developers"><img src="https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/devbadge.gif" width="45" height="45" alt="Developer Program"></a>
-  <a href="https://github.com/pricing"><img src="https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/pro.gif" width="45" height="45" alt="Pro"></a>
-  <a href="https://stars.github.com/"><img src="https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/starbadge.gif" width="40" height="40" alt="Star"></a>
-  <a href="https://docs.github.com/en/github/supporting-the-open-source-community-with-github-sponsors"><img src="https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/sponsorbadge.gif" width="40" height="40" alt="Sponsor"></a>
+  <a href="https://github.com/capmahin?tab=achievements">
+    <img src="./achievements.svg" width="100%" alt="Achievements: Arctic Code Vault, Developer Program, Pro, Galaxy Star, Open Source">
+  </a>
 </p>
 
 <p align="center"><img src="./divider.svg" width="100%" alt="divider"></p>
