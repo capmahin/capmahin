@@ -1,0 +1,168 @@
+name: Generate Animated Profile Graphics
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Prepare output folder
+        run: mkdir -p dist
+
+      - name: Generate animated activity graph
+        env:
+          GH_USER: ${{ github.repository_owner }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OUT: dist/activity-graph.svg
+        run: |
+          cat > gen_graph.py <<'PYEOF'
+          import os, json, datetime, urllib.request
+
+          USER = os.environ.get("GH_USER", "capmahin")
+          TOKEN = os.environ.get("GITHUB_TOKEN", "")
+          DAYS = 31
+          OUT = os.environ.get("OUT", "dist/activity-graph.svg")
+          BAT = "M100 20 L108 6 L112 24 Q124 22 136 26 Q160 14 196 30 Q176 38 170 58 Q160 46 146 52 Q134 44 124 62 L112 52 L100 82 L88 52 L76 62 Q66 44 54 52 Q40 46 30 58 Q24 38 4 30 Q40 14 64 26 Q76 22 88 24 L92 6 Z"
+          MONO = "font-family=\"'Courier New', Courier, monospace\""
+
+          end = datetime.date.today()
+          start = end - datetime.timedelta(days=DAYS - 1)
+          days = [start + datetime.timedelta(days=i) for i in range(DAYS)]
+          counts = {d.isoformat(): 0 for d in days}
+
+          def fetch():
+              q = ("query($login:String!,$from:DateTime!,$to:DateTime!){user(login:$login){"
+                   "contributionsCollection(from:$from,to:$to){contributionCalendar{weeks{contributionDays{date contributionCount}}}}}}")
+              body = json.dumps({"query": q, "variables": {
+                  "login": USER,
+                  "from": start.isoformat() + "T00:00:00Z",
+                  "to": end.isoformat() + "T23:59:59Z"}}).encode()
+              req = urllib.request.Request("https://api.github.com/graphql", data=body, headers={
+                  "Authorization": "bearer " + TOKEN, "Content-Type": "application/json", "User-Agent": "graph-gen"})
+              data = json.load(urllib.request.urlopen(req, timeout=30))
+              weeks = data["data"]["user"]["contributionsCollection"]["contributionCalendar"]["weeks"]
+              for w in weeks:
+                  for d in w["contributionDays"]:
+                      if d["date"] in counts:
+                          counts[d["date"]] = d["contributionCount"]
+
+          if TOKEN:
+              fetch()
+          else:  # local preview data
+              for k, v in {(end - datetime.timedelta(days=16)).isoformat(): 2,
+                           (end - datetime.timedelta(days=6)).isoformat(): 1,
+                           end.isoformat(): 4}.items():
+                  counts[k] = v
+
+          vals = [counts[d.isoformat()] for d in days]
+          total = sum(vals)
+          ymax = max(4, max(vals))
+          W, H = 1000, 380
+          L, R, T, B = 70, 30, 100, 50
+          pw, ph = W - L - R, H - T - B
+          n = len(vals)
+          xs = [L + i * pw / (n - 1) for i in range(n)]
+          ys = [T + ph - v / ymax * ph for v in vals]
+
+          # monotone cubic interpolation (no overshoot below zero)
+          def path(xs, ys):
+              n = len(xs)
+              dx = [xs[i + 1] - xs[i] for i in range(n - 1)]
+              dy = [ys[i + 1] - ys[i] for i in range(n - 1)]
+              s = [dy[i] / dx[i] for i in range(n - 1)]
+              m = [s[0]] + [0 if s[i - 1] * s[i] <= 0 else (s[i - 1] + s[i]) / 2 for i in range(1, n - 1)] + [s[-1]]
+              for i in range(n - 1):
+                  if s[i] == 0:
+                      m[i] = m[i + 1] = 0
+                  else:
+                      a, b = m[i] / s[i], m[i + 1] / s[i]
+                      h = (a * a + b * b) ** 0.5
+                      if h > 3:
+                          t = 3 / h
+                          m[i], m[i + 1] = t * a * s[i], t * b * s[i]
+              d = f"M{xs[0]:.1f} {ys[0]:.1f}"
+              for i in range(n - 1):
+                  h = dx[i] / 3
+                  d += f" C{xs[i]+h:.1f} {ys[i]+m[i]*h:.1f} {xs[i+1]-h:.1f} {ys[i+1]-m[i+1]*h:.1f} {xs[i+1]:.1f} {ys[i+1]:.1f}"
+              return d
+
+          line = path(xs, ys)
+          base = T + ph
+          area = line + f" L{xs[-1]:.1f} {base} L{xs[0]:.1f} {base} Z"
+
+          grid = ""
+          for t in range(0, ymax + 1):
+              y = T + ph - t / ymax * ph
+              grid += f'<line x1="{L}" y1="{y:.1f}" x2="{W-R}" y2="{y:.1f}" stroke="#00e5ff" stroke-opacity=".12" stroke-dasharray="3 5"/>'
+              grid += f'<text x="{L-12}" y="{y+4:.1f}" text-anchor="end" {MONO} font-size="12" fill="#00e5ff">{t}</text>'
+          for i, d in enumerate(days):
+              grid += f'<text x="{xs[i]:.1f}" y="{base+22}" text-anchor="middle" {MONO} font-size="11" fill="#6fb8c4">{d.day}</text>'
+
+          pts = ""
+          for i, v in enumerate(vals):
+              b = 0.15 + i * (2.6 / n)
+              if v > 0:
+                  pts += (f'<g opacity="0"><g transform="translate({xs[i]-18:.1f},{ys[i]-10:.1f}) scale(.18)" fill="#f5c518" filter="url(#glow)"><use href="#bat"/></g>'
+                          f'<text x="{xs[i]:.1f}" y="{ys[i]-18:.1f}" text-anchor="middle" {MONO} font-size="13" font-weight="700" fill="#f5c518">+{v}</text>'
+                          f'<animate attributeName="opacity" values="0;1" dur=".3s" begin="{b:.2f}s" fill="freeze"/>'
+                          f'<animate attributeName="opacity" values="1;.55;1" dur="2.4s" begin="{b+1:.2f}s" repeatCount="indefinite"/></g>')
+              else:
+                  pts += (f'<circle cx="{xs[i]:.1f}" cy="{ys[i]:.1f}" r="3" fill="#e8f7ff" opacity="0">'
+                          f'<animate attributeName="opacity" values="0;1" dur=".3s" begin="{b:.2f}s" fill="freeze"/>'
+                          f'<animate attributeName="r" values="3;4.5;3" dur="3s" begin="{b+1:.2f}s" repeatCount="indefinite"/></circle>')
+
+          svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
+            <defs>
+              <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#00e5ff" stop-opacity=".35"/><stop offset="1" stop-color="#00e5ff" stop-opacity="0"/></linearGradient>
+              <linearGradient id="beam" x1="0" x2="1"><stop offset="0" stop-color="#f5c518" stop-opacity="0"/><stop offset=".5" stop-color="#f5c518" stop-opacity=".9"/><stop offset="1" stop-color="#f5c518" stop-opacity="0"/></linearGradient>
+              <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+              <clipPath id="reveal"><rect x="{L-5}" y="0" width="0" height="{H}"><animate attributeName="width" values="0;{pw+10}" dur="3s" begin=".15s" fill="freeze"/></rect></clipPath>
+              <path id="bat" d="{BAT}"/>
+            </defs>
+            <rect x="1" y="1" width="{W-2}" height="{H-2}" rx="14" fill="#05080d" stroke="#00e5ff" stroke-opacity=".5"/>
+            <text x="30" y="40" {MONO} font-size="20" font-weight="700" fill="#00e5ff" filter="url(#glow)">// contributions.last({DAYS})</text>
+            <text x="30" y="66" {MONO} font-size="14" fill="#9fb8c4">user: "{USER}"   total: {total}   peak: {max(vals)}</text>
+            <g transform="translate({W-110},22) scale(.4)" fill="#00e5ff" filter="url(#glow)"><use href="#bat"/><animate attributeName="opacity" values="1;.4;1" dur="2.5s" repeatCount="indefinite"/></g>
+            {grid}
+            <g clip-path="url(#reveal)"><path d="{area}" fill="url(#area)"/></g>
+            <path d="{line}" pathLength="1" fill="none" stroke="#00e5ff" stroke-width="3" stroke-linecap="round" stroke-dasharray="1" stroke-dashoffset="1" filter="url(#glow)">
+              <animate attributeName="stroke-dashoffset" values="1;0" dur="3s" begin=".15s" fill="freeze"/>
+            </path>
+            {pts}
+            <rect x="{L}" y="{T-10}" width="3" height="{ph+10}" fill="url(#beam)" opacity="0">
+              <animate attributeName="x" values="{L};{W-R}" dur="5s" begin="3.4s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0;.8;0" dur="5s" begin="3.4s" repeatCount="indefinite"/>
+            </rect>
+            <text x="30" y="{H-14}" {MONO} font-size="13" fill="#6fb8c4">$ git log --since="{DAYS} days ago" --oneline | wc -l  →  {total}<tspan fill="#00e5ff"> █<animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/></tspan></text>
+          </svg>
+          '''
+          os.makedirs(os.path.dirname(OUT) or ".", exist_ok=True)
+          open(OUT, "w", encoding="utf-8").write(svg)
+          print("wrote", OUT, "total", total)
+          PYEOF
+          python3 gen_graph.py
+
+      - name: Generate snake animation
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/snake-dark.svg?color_snake=#00e5ff&color_dots=#0d1117,#003b45,#007a8a,#00b8d4,#00e5ff
+
+      - name: Push to output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
