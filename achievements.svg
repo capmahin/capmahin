@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="240" viewBox="0 0 1000 240" xmlns:c2pa="http://c2pa.org/manifest">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#070b12"/>
+      <stop offset="1" stop-color="#03050a"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" x2="1">
+      <stop offset="0" stop-color="#f5c518" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#f5c518" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#f5c518" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <path id="bat" d="M100 20 L108 6 L112 24 Q124 22 136 26 Q160 14 196 30 Q176 38 170 58 Q160 46 146 52 Q134 44 124 62 L112 52 L100 82 L88 52 L76 62 Q66 44 54 52 Q40 46 30 58 Q24 38 4 30 Q40 14 64 26 Q76 22 88 24 L92 6 Z"/>
+    <g id="card">
+      <rect width="150" height="120" rx="12" fill="#0a1018" stroke="#00e5ff" stroke-opacity=".45">
+        <animate attributeName="stroke-opacity" values=".25;.8;.25" dur="3s" repeatCount="indefinite"/>
+      </rect>
+      <path d="M0 14 V0 H14 M136 0 H150 V14 M150 106 V120 H136 M14 120 H0 V106" fill="none" stroke="#f5c518" stroke-width="2" stroke-linecap="round" opacity=".9"/>
+    </g>
+  </defs>
+
+  <!-- background -->
+  <rect x="1" y="1" width="998" height="238" rx="14" fill="url(#bg)" stroke="#00e5ff" stroke-opacity=".5"/>
+
+  <!-- header -->
+  <text x="30" y="38" font-family="'Courier New', Courier, monospace" font-size="19" font-weight="700" fill="#00e5ff" filter="url(#glow)">// achievements.unlocked</text>
+  <text x="970" y="38" text-anchor="end" font-family="'Courier New', Courier, monospace" font-size="14" fill="#f5c518">[ 5 / 5 ]</text>
+  <g transform="translate(905,14) scale(.28)" fill="#f5c518" filter="url(#glow)">
+    <use href="#bat"/>
+    <animate attributeName="opacity" values="1;.4;1" dur="2.5s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- flying bats -->
+  <g fill="#00e5ff" opacity=".35">
+    <g transform="translate(-40,60) scale(.12)"><use href="#bat"/>
+      <animateTransform attributeName="transform" type="translate" values="-40 60;1040 40" dur="14s" repeatCount="indefinite" additive="replace"/>
+    </g>
+  </g>
+  <g fill="#f5c518" opacity=".25">
+    <g transform="translate(1040,215) scale(.09)"><use href="#bat"/>
+      <animateTransform attributeName="transform" type="translate" values="1040 215;-60 200" dur="18s" repeatCount="indefinite" additive="replace"/>
+    </g>
+  </g>
+
+  <!-- ===== CARD 1 : Arctic Code Vault (snowflake) ===== -->
+  <g transform="translate(65,72)">
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 0" dur="3.2s" begin="0s" repeatCount="indefinite"/>
+      <use href="#card"/>
+      <g transform="translate(75,48)" stroke="#00e5ff" stroke-width="2.4" stroke-linecap="round" fill="none" filter="url(#glow)">
+        <animateTransform attributeName="transform" type="rotate" values="0 0 0;360 0 0" dur="20s" additive="sum" repeatCount="indefinite"/>
+        <g id="arm"><line x1="0" y1="-26" x2="0" y2="26"/><path d="M-6 -19 L0 -13 L6 -19 M-6 19 L0 13 L6 19"/></g>
+        <g transform="rotate(60)"><use href="#arm"/></g>
+        <g transform="rotate(120)"><use href="#arm"/></g>
+      </g>
+      <text x="75" y="98" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="12" font-weight="700" fill="#e8f7ff">ARCTIC VAULT</text>
+      <text x="75" y="112" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="9" fill="#00e5ff">[ UNLOCKED ]</text>
+    </g>
+  </g>
+
+  <!-- ===== CARD 2 : Developer Program (chip) ===== -->
+  <g transform="translate(245,72)">
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 0" dur="3.2s" begin="0.5s" repeatCount="indefinite"/>
+      <use href="#card"/>
+      <g transform="translate(75,48)" stroke="#00e5ff" stroke-width="2.4" fill="none" stroke-linecap="round" filter="url(#glow)">
+        <rect x="-16" y="-16" width="32" height="32" rx="4"/>
+        <rect x="-8" y="-8" width="16" height="16" rx="2" stroke="#f5c518">
+          <animate attributeName="opacity" values="1;.3;1" dur="1.6s" repeatCount="indefinite"/>
+        </rect>
+        <path d="M-8 -16 V-24 M0 -16 V-24 M8 -16 V-24 M-8 16 V24 M0 16 V24 M8 16 V24 M-16 -8 H-24 M-16 0 H-24 M-16 8 H-24 M16 -8 H24 M16 0 H24 M16 8 H24"/>
+      </g>
+      <text x="75" y="98" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="12" font-weight="700" fill="#e8f7ff">DEV PROGRAM</text>
+      <text x="75" y="112" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="9" fill="#00e5ff">[ UNLOCKED ]</text>
+    </g>
+  </g>
+
+  <!-- ===== CARD 3 : PRO ===== -->
+  <g transform="translate(425,72)">
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 0" dur="3.2s" begin="1s" repeatCount="indefinite"/>
+      <use href="#card"/>
+      <text x="75" y="60" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="34" font-weight="900" fill="#f5c518" filter="url(#glow)">PRO
+        <animate attributeName="opacity" values="1;.6;1" dur="2.2s" repeatCount="indefinite"/>
+      </text>
+      <text x="75" y="98" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="12" font-weight="700" fill="#e8f7ff">GITHUB PRO</text>
+      <text x="75" y="112" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="9" fill="#00e5ff">[ UNLOCKED ]</text>
+    </g>
+  </g>
+
+  <!-- ===== CARD 4 : Star ===== -->
+  <g transform="translate(605,72)">
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 0" dur="3.2s" begin="1.5s" repeatCount="indefinite"/>
+      <use href="#card"/>
+      <g transform="translate(75,48)" filter="url(#glow)">
+        <polygon points="0,-26 6.47,-8.9 24.73,-8.03 10.46,3.4 15.28,21.04 0,11 -15.28,21.04 -10.46,3.4 -24.73,-8.03 -6.47,-8.9" fill="#f5c518">
+          <animateTransform attributeName="transform" type="scale" values="1;1.12;1" dur="2s" repeatCount="indefinite"/>
+        </polygon>
+      </g>
+      <text x="75" y="98" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="12" font-weight="700" fill="#e8f7ff">GALAXY STAR</text>
+      <text x="75" y="112" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="9" fill="#00e5ff">[ UNLOCKED ]</text>
+    </g>
+  </g>
+
+  <!-- ===== CARD 5 : Sponsor (heart) ===== -->
+  <g transform="translate(785,72)">
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 0" dur="3.2s" begin="2s" repeatCount="indefinite"/>
+      <use href="#card"/>
+      <g filter="url(#glow)">
+        <text x="75" y="60" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="36" font-weight="900"><tspan fill="#00e5ff">&lt;</tspan><tspan fill="#f5c518">/<animate attributeName="opacity" values="1;.2;1" dur="1.8s" repeatCount="indefinite"/></tspan><tspan fill="#00e5ff">&gt;</tspan></text>
+        <rect x="63" y="68" width="24" height="3" rx="1.5" fill="#39ff88">
+          <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+      <text x="75" y="98" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="12" font-weight="700" fill="#e8f7ff">OPEN SOURCE</text>
+      <text x="75" y="112" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="9" fill="#00e5ff">[ UNLOCKED ]</text>
+    </g>
+  </g>
+
+  <!-- bat-signal sweep beam -->
+  <rect x="65" y="62" width="40" height="140" fill="url(#beam)" opacity="0">
+    <animate attributeName="x" values="40;900" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;.8;.8;0" keyTimes="0;.1;.9;1" dur="5s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- footer -->
+  <text x="30" y="226" font-family="'Courier New', Courier, monospace" font-size="12" fill="#6fb8c4">$ gh achievements --list  →  5 unlocked<tspan fill="#00e5ff"> █<animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/></tspan></text>
+<metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo3ZTdkZTkzNS0yMGNiLTQyODAtOWMyNC1lMTdlOGQ2MDY1YjkAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaL5yl12TWQHfK2AfZVash78AAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDozZDdhMjkyMi05NzUyLTQ3NDUtYTVlNC0zNTg5MDM3Y2E1ZmRscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoGAnrclMLmr4fZdFHP5EW0AAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFgghwIhqjdsfh5HPgLA3PRBSy0L75lo13yATfbRPK0CZMukZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaJIp563k9uCE+8hnkp+zQX4AAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYICG8Eqzi+LCZswWba/knFnRzwPcnXXNTgnrWQ10YGW7gZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GSDcZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjdlN2RlOTM1LTIwY2ItNDI4MC05YzI0LWUxN2U4ZDYwNjViOS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjdhN2E1NjQ4LWE4ZGEtNDU5Zi04MGU0LTRkMTNjYTBlYTc4NXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCCHAiGqN2x+Hkc+AsDc9EFLLQvvmWjXfIBN9tE8rQJky6JjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggH4wn8nyaHmElGKqNNjy8B2Hzi/dXZV1/Fs9Ua6KM9e6iY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgg/HrwT4nAw70+roEDcZPMNQ+c8aSdsLunGpQoxTAXhkZ0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQPUGPFO4M7QM/GZ/C9VTZFR/9VUOrFTHBV4B4y///VodnSNSDH/V5aH3Rjk3aa68VXeC/u08M0cQpuGwWxBIkEM=</c2pa:manifest></metadata></svg>
