@@ -1,39 +1,47 @@
 <p align="center">
-  <img src="./cover.jpg" alt="GhostUkab - Mahin Mridha (Hawkeye) - Full Stack Developer" width="100%">
-</p>
-
-<h1 align="center">👤 GhostUkab <sub>// Mahin Mridha aka Hawkeye</sub></h1>
-
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00E5FF&center=true&vCenter=true&width=620&lines=%3E+Full+Stack+Developer+(MERN+%2B+Next.js);%3E+Building+multi-vendor+platforms;%3E+TypeScript+%7C+Prisma+%7C+PostgreSQL;%3E+Docker+%2B+Claude+AI+power+user;%3E+Dark+mode.+Always.+%F0%9F%A6%87" alt="Typing SVG" />
+  <img src="./cover.jpg" alt="GhostUkab cover" width="100%">
 </p>
 
 <p align="center">
-  <i>"Not the developer you need, but the one your bugs deserve."</i>
+  <img src="./header.svg" alt="Mahin Mridha aka GhostUkab - Full Stack Developer" width="100%">
 </p>
 
 <p align="center">
-  <a href="https://github.com/capmahin"><img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="GitHub" height="36"></a>&nbsp;&nbsp;
-  <a href="https://www.linkedin.com/in/mahin-mridha-7a26b5194/"><img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="LinkedIn" height="36"></a>&nbsp;&nbsp;
-  <a href="https://www.facebook.com/mahin.mridha.752/"><img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/facebook.svg" alt="Facebook" height="36"></a>&nbsp;&nbsp;
-  <a href="https://stackoverflow.com/users/18385640/mahin-mridha"><img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/stackoverflow.svg" alt="Stack Overflow" height="36"></a>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00E5FF&center=true&vCenter=true&width=640&lines=%3E+Full+Stack+Developer+(MERN+%2B+Next.js);%3E+Building+multi-vendor+platforms;%3E+TypeScript+%7C+Prisma+%7C+PostgreSQL;%3E+Docker+%2B+Claude+AI+power+user;%3E+Dark+mode.+Always.+%F0%9F%A6%87" alt="Typing SVG" />
+</p>
+
+<p align="center"><i>"Not the developer you need, but the one your bugs deserve."</i></p>
+
+<p align="center">
+  <a href="https://github.com/capmahin"><img src="https://img.shields.io/badge/GitHub-capmahin-0a0a0f?style=for-the-badge&logo=github&logoColor=00e5ff" alt="GitHub"></a>
+  <a href="https://www.linkedin.com/in/mahin-mridha-7a26b5194/"><img src="https://img.shields.io/badge/LinkedIn-Mahin_Mridha-0a0a0f?style=for-the-badge&logo=linkedin&logoColor=0A66C2" alt="LinkedIn"></a>
+  <a href="https://www.facebook.com/mahin.mridha.752/"><img src="https://img.shields.io/badge/Facebook-Mahin_Mridha-0a0a0f?style=for-the-badge&logo=facebook&logoColor=1877F2" alt="Facebook"></a>
+  <a href="https://stackoverflow.com/users/18385640/mahin-mridha"><img src="https://img.shields.io/badge/Stack_Overflow-Mahin_Mridha-0a0a0f?style=for-the-badge&logo=stackoverflow&logoColor=F58025" alt="Stack Overflow"></a>
 </p>
 
 ---
 
-## 🦇 About Me
+## 🦇 Who Am I
 
-- 🔭 Currently working on **vvendor**, a multi-vendor platform, under [Visiontillion](https://github.com/Visiontillion)
-- 🌱 Deepening my **TypeScript**, **Next.js** and **Prisma** skills
-- 👯 Looking to **collaborate on GitHub**
-- 💬 Ask me about **Web Development**
+```bash
+ghost@ukab:~$ whoami
+> Mahin Mridha (aka Hawkeye), Full Stack Developer
+
+ghost@ukab:~$ cat status.txt
+> 🔭 Building   : vvendor, a multi-vendor platform
+> 🌱 Mastering  : TypeScript, Next.js, Prisma
+> 👯 Open to    : collaboration on GitHub
+> 💬 Ask me     : anything about Web Development
+> ⚡ Fun fact   : Gaming 🎮
+```
+
+- 🔭 Currently working on **vvendor** under [Visiontillion](https://github.com/Visiontillion)
 - 📫 Reach me on **Facebook**, **Discord** or **LinkedIn**
 - 😄 Pronouns: **Hawkeye**
-- ⚡ Fun fact: **Gaming** 🎮
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Tech Arsenal
 
 | Category | Technologies |
 | :-- | :-- |
@@ -46,7 +54,7 @@
 | **AI Tools** | Claude AI |
 | **Tools** | Git, GitHub, Visual Studio, VS Code |
 
-<p>
+<p align="center">
   <img src="https://img.shields.io/badge/HTML5-0a0a0f?style=for-the-badge&logo=html5&logoColor=E34F26" alt="HTML5">
   <img src="https://img.shields.io/badge/CSS3-0a0a0f?style=for-the-badge&logo=css3&logoColor=1572B6" alt="CSS3">
   <img src="https://img.shields.io/badge/JavaScript-0a0a0f?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript">
@@ -68,21 +76,22 @@
 
 ---
 
-## 🏅 Badges
+## 🏅 Achievements
 
-<a href="https://archiveprogram.github.com/"><img src="https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/acbadge.gif" width="40" height="40" alt="Arctic Code Vault"></a>
-<a href="https://docs.github.com/en/developers"><img src="https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/devbadge.gif" width="40" height="40" alt="Developer Program"></a>
-<a href="https://github.com/pricing"><img src="https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/pro.gif" width="40" height="40" alt="Pro"></a>
-<a href="https://stars.github.com/"><img src="https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/starbadge.gif" width="35" height="35" alt="Star"></a>
-<a href="https://docs.github.com/en/github/supporting-the-open-source-community-with-github-sponsors"><img src="https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/sponsorbadge.gif" width="35" height="35" alt="Sponsor"></a>
+<p align="center">
+  <a href="https://archiveprogram.github.com/"><img src="https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/acbadge.gif" width="45" height="45" alt="Arctic Code Vault"></a>
+  <a href="https://docs.github.com/en/developers"><img src="https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/devbadge.gif" width="45" height="45" alt="Developer Program"></a>
+  <a href="https://github.com/pricing"><img src="https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/pro.gif" width="45" height="45" alt="Pro"></a>
+  <a href="https://stars.github.com/"><img src="https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/starbadge.gif" width="40" height="40" alt="Star"></a>
+  <a href="https://docs.github.com/en/github/supporting-the-open-source-community-with-github-sponsors"><img src="https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/sponsorbadge.gif" width="40" height="40" alt="Sponsor"></a>
+</p>
 
 ---
 
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=capmahin&show_icons=true&count_private=true&hide_border=false&bg_color=0a0a0f&title_color=00e5ff&icon_color=00e5ff&text_color=c9d1d9&border_color=00e5ff" alt="GitHub stats" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=capmahin&layout=compact&bg_color=0a0a0f&title_color=00e5ff&text_color=c9d1d9&border_color=00e5ff" alt="Top languages" />
+  <img height="180" src="https://github-readme-stats.vercel.app/api?username=capmahin&show_icons=true&count_private=true&bg_color=0a0a0f&title_color=00e5ff&icon_color=00e5ff&text_color=c9d1d9&border_color=00e5ff" alt="GitHub stats" />
 </p>
 
 <p align="center">
