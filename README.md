@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./cover.jpg" alt="GhostUkab cover" width="100%">
+  <img src="./cover.svg" alt="GhostUkab animated cover" width="100%">
 </p>
 
 <p align="center">
@@ -7,76 +7,36 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00E5FF&center=true&vCenter=true&width=640&lines=%3E+Full+Stack+Developer+(MERN+%2B+Next.js);%3E+Building+multi-vendor+platforms;%3E+TypeScript+%7C+Prisma+%7C+PostgreSQL;%3E+Docker+%2B+Claude+AI+power+user;%3E+Dark+mode.+Always.+%F0%9F%A6%87" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00E5FF&center=true&vCenter=true&width=700&lines=%3E+Full+Stack+Developer+(MERN+%2B+Next.js);%3E+Building+multi-vendor+platforms;%3E+TypeScript+%7C+Prisma+%7C+PostgreSQL;%3E+Docker+%2B+Claude+AI+power+user;%3E+while(alive)+%7B+code()%3B+ship()%3B+%7D" alt="Typing SVG" />
 </p>
-
-<p align="center"><i>"Not the developer you need, but the one your bugs deserve."</i></p>
 
 <p align="center">
   <a href="https://github.com/capmahin"><img src="https://img.shields.io/badge/GitHub-capmahin-0a0a0f?style=for-the-badge&logo=github&logoColor=00e5ff" alt="GitHub"></a>
+  <a href="https://github.com/Visiontillion"><img src="https://img.shields.io/badge/Org-Visiontillion-0a0a0f?style=for-the-badge&logo=github&logoColor=f5c518" alt="Visiontillion"></a>
   <a href="https://www.linkedin.com/in/mahin-mridha-7a26b5194/"><img src="https://img.shields.io/badge/LinkedIn-Mahin_Mridha-0a0a0f?style=for-the-badge&logo=linkedin&logoColor=0A66C2" alt="LinkedIn"></a>
   <a href="https://www.facebook.com/mahin.mridha.752/"><img src="https://img.shields.io/badge/Facebook-Mahin_Mridha-0a0a0f?style=for-the-badge&logo=facebook&logoColor=1877F2" alt="Facebook"></a>
   <a href="https://stackoverflow.com/users/18385640/mahin-mridha"><img src="https://img.shields.io/badge/Stack_Overflow-Mahin_Mridha-0a0a0f?style=for-the-badge&logo=stackoverflow&logoColor=F58025" alt="Stack Overflow"></a>
 </p>
 
----
+<p align="center"><img src="./divider.svg" width="100%" alt="divider"></p>
 
 ## 🦇 Who Am I
 
-```bash
-ghost@ukab:~$ whoami
-> Mahin Mridha (aka Hawkeye), Full Stack Developer
-
-ghost@ukab:~$ cat status.txt
-> 🔭 Building   : vvendor, a multi-vendor platform
-> 🌱 Mastering  : TypeScript, Next.js, Prisma
-> 👯 Open to    : collaboration on GitHub
-> 💬 Ask me     : anything about Web Development
-> ⚡ Fun fact   : Gaming 🎮
-```
-
-- 🔭 Currently working on **vvendor** under [Visiontillion](https://github.com/Visiontillion)
-- 📫 Reach me on **Facebook**, **Discord** or **LinkedIn**
-- 😄 Pronouns: **Hawkeye**
-
----
-
-## 🛠️ Tech Arsenal
-
-| Category | Technologies |
-| :-- | :-- |
-| **Languages** | HTML5, CSS3, JavaScript, TypeScript, Assembly |
-| **Frameworks & Libraries** | React, Next.js, Node.js, Express, Redux, Bootstrap 5, Tailwind CSS, shadcn/ui |
-| **Databases & ORM** | MongoDB, PostgreSQL, Prisma ORM, Firebase Firestore |
-| **Technologies** | REST APIs, JSON, MVC, XML, Socket, WebRTC |
-| **Authentication** | Firebase Authentication, JWT, NextAuth |
-| **DevOps & Deployment** | Docker, Vercel, Heroku, Netlify |
-| **AI Tools** | Claude AI |
-| **Tools** | Git, GitHub, Visual Studio, VS Code |
-
 <p align="center">
-  <img src="https://img.shields.io/badge/HTML5-0a0a0f?style=for-the-badge&logo=html5&logoColor=E34F26" alt="HTML5">
-  <img src="https://img.shields.io/badge/CSS3-0a0a0f?style=for-the-badge&logo=css3&logoColor=1572B6" alt="CSS3">
-  <img src="https://img.shields.io/badge/JavaScript-0a0a0f?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript">
-  <img src="https://img.shields.io/badge/TypeScript-0a0a0f?style=for-the-badge&logo=typescript&logoColor=3178C6" alt="TypeScript">
-  <img src="https://img.shields.io/badge/React-0a0a0f?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React">
-  <img src="https://img.shields.io/badge/Next.js-0a0a0f?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js">
-  <img src="https://img.shields.io/badge/Node.js-0a0a0f?style=for-the-badge&logo=nodedotjs&logoColor=339933" alt="Node.js">
-  <img src="https://img.shields.io/badge/Express-0a0a0f?style=for-the-badge&logo=express&logoColor=white" alt="Express">
-  <img src="https://img.shields.io/badge/Tailwind_CSS-0a0a0f?style=for-the-badge&logo=tailwindcss&logoColor=06B6D4" alt="Tailwind CSS">
-  <img src="https://img.shields.io/badge/Prisma-0a0a0f?style=for-the-badge&logo=prisma&logoColor=white" alt="Prisma">
-  <img src="https://img.shields.io/badge/PostgreSQL-0a0a0f?style=for-the-badge&logo=postgresql&logoColor=4169E1" alt="PostgreSQL">
-  <img src="https://img.shields.io/badge/MongoDB-0a0a0f?style=for-the-badge&logo=mongodb&logoColor=47A248" alt="MongoDB">
-  <img src="https://img.shields.io/badge/Firebase-0a0a0f?style=for-the-badge&logo=firebase&logoColor=FFCA28" alt="Firebase">
-  <img src="https://img.shields.io/badge/Docker-0a0a0f?style=for-the-badge&logo=docker&logoColor=2496ED" alt="Docker">
-  <img src="https://img.shields.io/badge/Git-0a0a0f?style=for-the-badge&logo=git&logoColor=F05032" alt="Git">
-  <img src="https://img.shields.io/badge/Vercel-0a0a0f?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel">
-  <img src="https://img.shields.io/badge/Claude_AI-0a0a0f?style=for-the-badge&logo=anthropic&logoColor=D97757" alt="Claude AI">
+  <img src="./about.svg" width="100%" alt="Terminal: whoami and status.json">
 </p>
 
----
+<p align="center"><img src="./divider.svg" width="100%" alt="divider"></p>
 
-## 🏅 Achievements
+## 🦇 Tech Stack
+
+<p align="center">
+  <img src="./stack.svg" width="100%" alt="Tech stack: HTML5, CSS3, JavaScript, TypeScript, React, Next.js, Node.js, Express, Redux, Tailwind CSS, shadcn/ui, MongoDB, PostgreSQL, Prisma, Firebase, JWT, NextAuth, Docker, Vercel, Git, Claude AI">
+</p>
+
+<p align="center"><img src="./divider.svg" width="100%" alt="divider"></p>
+
+## 🦇 Achievements
 
 <p align="center">
   <a href="https://archiveprogram.github.com/"><img src="https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/acbadge.gif" width="45" height="45" alt="Arctic Code Vault"></a>
@@ -86,9 +46,9 @@ ghost@ukab:~$ cat status.txt
   <a href="https://docs.github.com/en/github/supporting-the-open-source-community-with-github-sponsors"><img src="https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/sponsorbadge.gif" width="40" height="40" alt="Sponsor"></a>
 </p>
 
----
+<p align="center"><img src="./divider.svg" width="100%" alt="divider"></p>
 
-## 📊 GitHub Stats
+## 🦇 Dev Stats
 
 <p align="center">
   <img height="180" src="https://github-readme-stats.vercel.app/api?username=capmahin&show_icons=true&count_private=true&bg_color=0a0a0f&title_color=00e5ff&icon_color=00e5ff&text_color=c9d1d9&border_color=00e5ff" alt="GitHub stats" />
@@ -99,7 +59,11 @@ ghost@ukab:~$ cat status.txt
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=capmahin&bg_color=0a0a0f&color=00e5ff&line=00e5ff&point=ffffff&area=true&area_color=00e5ff&hide_border=true" alt="Activity graph" />
+  <img src="https://raw.githubusercontent.com/capmahin/capmahin/output/activity-graph.svg" alt="Animated contribution graph" width="100%" />
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/capmahin/capmahin/output/snake-dark.svg" alt="Contribution snake animation" width="100%" />
 </p>
 
 <p align="center">
@@ -107,5 +71,5 @@ ghost@ukab:~$ cat status.txt
 </p>
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,100:00e5ff&height=100&section=footer" alt="footer" width="100%" />
+  <img src="./footer.svg" width="100%" alt="Code rain terminal: git push origin main, deployed" />
 </p>
