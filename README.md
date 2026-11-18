@@ -11,12 +11,12 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/capmahin"><img src="./buttons/github.svg" alt="GitHub capmahin"></a>
-  <a href="https://github.com/Visiontillion"><img src="./buttons/visiontillion.svg" alt="Org Visiontillion"></a>
-  <a href="https://github.com/Plivix-Technologies"><img src="./buttons/plivix.svg" alt="Org Plivix Technologies"></a>
-  <a href="https://www.linkedin.com/in/mahin-mridha-7a26b5194/"><img src="./buttons/linkedin.svg" alt="LinkedIn Mahin Mridha"></a>
-  <a href="https://www.facebook.com/mahin.mridha.752/"><img src="./buttons/facebook.svg" alt="Facebook Mahin Mridha"></a>
-  <a href="https://stackoverflow.com/users/18385640/mahin-mridha"><img src="./buttons/stackoverflow.svg" alt="Stack Overflow Mahin Mridha"></a>
+  <a href="https://github.com/capmahin"><img src="./github.svg" alt="GitHub capmahin"></a>
+  <a href="https://github.com/Visiontillion"><img src="./visiontillion.svg" alt="Org Visiontillion"></a>
+  <a href="https://github.com/Plivix-Technologies"><img src="./plivix.svg" alt="Org Plivix Technologies"></a>
+  <a href="https://www.linkedin.com/in/mahin-mridha-7a26b5194/"><img src="./linkedin.svg" alt="LinkedIn Mahin Mridha"></a>
+  <a href="https://www.facebook.com/mahin.mridha.752/"><img src="./facebook.svg" alt="Facebook Mahin Mridha"></a>
+  <a href="https://stackoverflow.com/users/18385640/mahin-mridha"><img src="./stackoverflow.svg" alt="Stack Overflow Mahin Mridha"></a>
 </p>
 
 <p align="center"><img src="./divider.svg" width="100%" alt="divider"></p>
