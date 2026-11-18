@@ -112,21 +112,20 @@ jobs:
           for i, v in enumerate(vals):
               b = 0.15 + i * (2.6 / n)
               if v > 0:
-                  pts += (f'<g opacity="0"><g transform="translate({xs[i]-18:.1f},{ys[i]-10:.1f}) scale(.18)" fill="#f5c518" filter="url(#glow)"><use href="#bat"/></g>'
+                  pts += (f'<g opacity="0"><g transform="translate({xs[i]-18:.1f},{ys[i]-10:.1f}) scale(.18)" fill="#f5c518" filter="url(#glow)"><use href="#bat"/><animate attributeName="opacity" values="1;.55;1" dur="2.4s" repeatCount="indefinite"/></g>'
                           f'<text x="{xs[i]:.1f}" y="{ys[i]-18:.1f}" text-anchor="middle" {MONO} font-size="13" font-weight="700" fill="#f5c518">+{v}</text>'
-                          f'<animate attributeName="opacity" values="0;1" dur=".3s" begin="{b:.2f}s" fill="freeze"/>'
-                          f'<animate attributeName="opacity" values="1;.55;1" dur="2.4s" begin="{b+1:.2f}s" repeatCount="indefinite"/></g>')
+                          f'<animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;{b/9:.4f};{(b+.3)/9:.4f};.93;1" dur="9s" repeatCount="indefinite"/></g>')
               else:
                   pts += (f'<circle cx="{xs[i]:.1f}" cy="{ys[i]:.1f}" r="3" fill="#e8f7ff" opacity="0">'
-                          f'<animate attributeName="opacity" values="0;1" dur=".3s" begin="{b:.2f}s" fill="freeze"/>'
-                          f'<animate attributeName="r" values="3;4.5;3" dur="3s" begin="{b+1:.2f}s" repeatCount="indefinite"/></circle>')
+                          f'<animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;{b/9:.4f};{(b+.3)/9:.4f};.93;1" dur="9s" repeatCount="indefinite"/>'
+                          f'<animate attributeName="r" values="3;4.5;3" dur="3s" repeatCount="indefinite"/></circle>')
 
           svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
             <defs>
               <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#00e5ff" stop-opacity=".35"/><stop offset="1" stop-color="#00e5ff" stop-opacity="0"/></linearGradient>
               <linearGradient id="beam" x1="0" x2="1"><stop offset="0" stop-color="#f5c518" stop-opacity="0"/><stop offset=".5" stop-color="#f5c518" stop-opacity=".9"/><stop offset="1" stop-color="#f5c518" stop-opacity="0"/></linearGradient>
               <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-              <clipPath id="reveal"><rect x="{L-5}" y="0" width="0" height="{H}"><animate attributeName="width" values="0;{pw+10}" dur="3s" begin=".15s" fill="freeze"/></rect></clipPath>
+              <clipPath id="reveal"><rect x="{L-5}" y="0" width="0" height="{H}"><animate attributeName="width" values="0;0;{pw+10};{pw+10};0" keyTimes="0;.016;.35;.93;1" dur="9s" repeatCount="indefinite"/></rect></clipPath>
               <path id="bat" d="{BAT}"/>
             </defs>
             <rect x="1" y="1" width="{W-2}" height="{H-2}" rx="14" fill="#05080d" stroke="#00e5ff" stroke-opacity=".5"/>
@@ -136,7 +135,7 @@ jobs:
             {grid}
             <g clip-path="url(#reveal)"><path d="{area}" fill="url(#area)"/></g>
             <path d="{line}" pathLength="1" fill="none" stroke="#00e5ff" stroke-width="3" stroke-linecap="round" stroke-dasharray="1" stroke-dashoffset="1" filter="url(#glow)">
-              <animate attributeName="stroke-dashoffset" values="1;0" dur="3s" begin=".15s" fill="freeze"/>
+              <animate attributeName="stroke-dashoffset" values="1;1;0;0;1" keyTimes="0;.016;.35;.93;1" dur="9s" repeatCount="indefinite"/>
             </path>
             {pts}
             <rect x="{L}" y="{T-10}" width="3" height="{ph+10}" fill="url(#beam)" opacity="0">
